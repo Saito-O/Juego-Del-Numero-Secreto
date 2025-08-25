@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    border: 1px solid #1875E8;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("img/Ruido.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 2rem;
+}
+
+.container__contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.container__informaciones {
+    flex: 1;
+    width: 100%;
+}
+
+.game_mode {
+    border-radius: 16px;
+    background: #1875E8;
+    padding: 1rem;
+    width: 100%;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 700;
+    border: none;
+    margin-top: 1rem;
+}
+
+.game_mode:disabled {
+    background: #898989;
+}
+
+.container__boton {
+    border-radius: 16px;
+    background: #1875E8;
+    padding: 1rem;
+    width: 100%;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 700;
+    border: none;
+    margin-top: 1rem;
+}
+
+.container__boton:disabled {
+    background: #898989;
+}
+
+.container__texto {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.container__texto-azul {
+    color: #1875E8;
+}
+
+.container__input {
+    width: 100%;
+    height: 72px;
+    border-radius: 16px;
+    background-color: #FFF;
+    border: none;
+    color: #1875E8;
+    padding: 1rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.container__botones {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 4.5rem);
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+p,
+button {
+    font-family: 'Inter', sans-serif;
+}
+
+.texto__parrafo {
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-weight: 400;
+    text-align: center;
+}
+
+.container__imagen-persona {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 16px;
+    margin-top: 1rem;
+}
+
+@media (max-width: 480px) {
+    .container__botones {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .container__contenido {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container__imagen-persona {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
